@@ -1,0 +1,7 @@
+<button (click) = "getEvents()">
+GET
+</button>
+
+<p *ngFor = "let e of events">{{e.name}}</p>
+
+<router-outlet></router-outlet>
