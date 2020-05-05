@@ -7,11 +7,7 @@ import { EventsService } from './events.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  events = [];
 
   constructor(private eventsService: EventsService) { }
 
-  getEvents() {
-    this.events = this.eventsService.getEvents();
-  }
 }
