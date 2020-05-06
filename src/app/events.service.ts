@@ -6,9 +6,9 @@ import { HttpClient } from '@angular/common/http';
 }) 
 export class EventsService {
   events = [
-    { id: 1, title: 'Event 11' },
-    { id: 2, title: 'Event 2' },
-    { id: 3, title: 'Event 3' }
+    { id: 1, title: 'Event 1', date: "10-10-20", description: 'desc'},
+    { id: 2, title: 'Event 2', date: "10-10-20", description: 'desc'},
+    { id: 3, title: 'Event 3', date: "10-10-20", description: 'desc'}
   ];
 
   private env = "http://localhost:3001"
@@ -25,7 +25,8 @@ export class EventsService {
   }
 
   getEvent(id) {
-    return this.http.get(`${this.urlGet}/${id}`);
+    return this.events[0];
+    //return this.http.get(`${this.urlGet}/${id}`);
   }
 
   addEvent(event) {
@@ -37,8 +38,9 @@ export class EventsService {
     return this.http.put(`${this.urlModify}`, event);
   }
 
-  removeEvent(id) {
-    return this.http.delete(`${this.urlDelete}/${id}`);
+  deleteEvent(id) {
+    //return this.http.delete(`${this.urlDelete}/${id}`);
+    
   }
 
 }

@@ -20,4 +20,13 @@ export class HomeComponent implements OnInit{
     this.events = this.eventsService.getEvents();
   }
 
+  confirmDeleteEvent(id){
+    alert("delete ?")
+  }
+
+  deleteEvent(id){
+    console.log("id:",id);
+    this.eventsService.deleteEvent(id);
+  }
+
 }

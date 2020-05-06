@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AddEventComponent } from './add-event/add-event.component';
+import { EditEventComponent } from './edit-event/edit-event.component';
 
-
-//const routes: Routes = [];
 
 const routes: Routes = [ 
-  {path:"home", component:HomeComponent}, 
-  {path:"addevent", component:AddEventComponent} 
+  { path:"home", component:HomeComponent}, 
+  { path:"editEvent/:id", component:EditEventComponent},
+  { path:"editEvent", component:EditEventComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -16,4 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponent = [HomeComponent,AddEventComponent];
+export const RoutingComponent = [HomeComponent,EditEventComponent];

@@ -1,5 +1,30 @@
-<h2>home</h2>
+<style>
+    div{
+        background-color: beige;
+        margin-bottom: 5px;
+    }
+    .title{
+        font-weight: bold;
+    }
+    .action{
+        float: right
+    }
+    .event{
+        width: 50%
+    }
+    .bt{
+        float: right
+    }
+</style>
 
-<p *ngFor = "let e of events">
-    {{e.title}}
-</p>
+<h2>Home</h2>
+
+<div class="event" *ngFor = "let e of events">
+    <div class="action">
+        <button class="bt" routerLink="/editEvent/1">Editer</button>
+        <button (click)="confirmDeleteEvent(e.id)">Delete</button>
+    </div>
+    <span class="title">{{e.title}}</span><br>
+    <span>{{e.date}}</span><br>
+    <span>{{e.description}}</span>
+</div>

@@ -1,0 +1,20 @@
+<h2>{{title_page}}</h2>
+
+<p>
+    Titre
+    <input #title value="{{titre_value}}"/>
+</p>
+
+<p>
+    Date
+    <input #date value="{{date_value}}"/>
+</p>
+
+<p>
+    Description
+    <input #description value="{{description_value}}"/>
+</p>
+
+
+<button routerLink = "/home">Annuler</button>
+<button (click)="editEvent(title.value, description.value, date.value)">{{confirm}}</button>
